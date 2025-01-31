@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン予約</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>レッスン予約フォーム</h1>
+    <form id="bookingForm">
+      <label for="name">お名前</label>
+      <input type="text" id="name" name="name" placeholder="お名前を入力" required>
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" placeholder="メールアドレスを入力" required>
+      <label for="lessonType">レッスンの種類</label>
+      <select id="lessonType" name="lessonType" required>
+        <option value="">選択してください</option>
+        <option value="voice">ボイストレーニング</option>
+        <option value="guitar">ギター</option>
+        <option value="piano">ピアノ</option>
+      </select>
+      <label for="date">希望日時</label>
+      <input type="datetime-local" id="date" name="date" required>
+      <button type="submit">予約する</button>
+    </form>
+    <div id="confirmationMessage"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
